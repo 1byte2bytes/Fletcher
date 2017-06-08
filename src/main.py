@@ -8,4 +8,4 @@ with open(sys.argv[1]) as f:
     for line in f.readlines():
         print(line)
 
-        headers.detectHeader(line)
+        markdown.headers.detectHeader(line)
