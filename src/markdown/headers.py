@@ -1,5 +1,6 @@
 class header():
     level = 0
+    content = ""
 
 def detectHeader(line):
     isHeader = False
