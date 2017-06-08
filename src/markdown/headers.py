@@ -1,6 +1,5 @@
 class header():
     level = 0
-    contentSpacePrefixed = False
 
 def detectHeader(line):
     isHeader = False
@@ -13,11 +12,10 @@ def detectHeader(line):
                 newHeader.level += 1
             else:
                 if letter == ' ':
-                    newHeader.contentSpacePrefixed = True
+                    pass
                 else:
                     isHeader = False
                 break
-        print(newHeader.level, newHeader.contentSpacePrefixed)
     
     if isHeader == True:
         return newHeader
