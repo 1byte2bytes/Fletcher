@@ -1,10 +1,13 @@
 class header():
-    level = 0
-    content = ""
+    def __init__(self):
+        self.level = 0
+        self.content = ""
+        self.rawline = ""
 
 def detectHeader(line):
     isHeader = False
     newHeader = header()
+    header.rawline = line
 
     if line.startswith("#"):
         isHeader = True
