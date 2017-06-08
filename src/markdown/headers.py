@@ -14,7 +14,12 @@ def detectHeader(line):
             else:
                 if letter == ' ':
                     newHeader.contentSpacePrefixed = True
+                else:
+                    isHeader = False
                 break
         print(newHeader.level, newHeader.contentSpacePrefixed)
     
-    return newHeader
+    if isHeader == True:
+        return newHeader
+    else:
+        return None
