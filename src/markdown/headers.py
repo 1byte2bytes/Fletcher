@@ -1,15 +1,20 @@
+class header():
+    level = 0
+    contentSpacePrefixed = False
+
 def detectHeader(line):
     isHeader = False
-    headerCount = 0
-    headerSpacePrefix = False
+    newHeader = header()
 
     if line.startswith("#"):
         isHeader = True
         for letter in line:
             if letter == '#':
-                headerCount += 1
+                newHeader.level += 1
             else:
                 if letter == ' ':
-                    headerSpacePrefix = True
+                    newHeader.contentSpacePrefixed = True
                 break
-        print(headerCount, headerSpacePrefix)
+        print(newHeader.level, newHeader.contentSpacePrefixed)
+    
+    return newHeader
